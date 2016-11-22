@@ -124,6 +124,15 @@ function noPellets() {
     console.log('\n0 Pellets Left!')
   }
 }
+
+function validatePellets() {
+  if (powerPellets > 0) {
+    eatPellet()
+  }
+  else if (powerPellets === 0) {
+    noPellets()
+  }
+}
 // Process Player's Input
 function processInput(key) {
   switch(key) {
@@ -151,7 +160,7 @@ function processInput(key) {
       gameOver();
       break;
     case 'p':
-      eatPellet();
+      validatePellets();
       gameOver();
       break;
     default:
