@@ -15,7 +15,7 @@ var inky = {
 
 var blinky = {
   menu_option: '2',
-  name: 'Iknky',
+  name: 'Blinky',
   color: 'Cyan',
   character: 'Speedy',
   edible: false
@@ -23,7 +23,7 @@ var blinky = {
 
 var pinky = {
   menu_option: '3',
-  name: 'Piknky',
+  name: 'Pinky',
   color: 'Pink',
   character: 'Bashful',
   edible: false
@@ -72,11 +72,11 @@ function displayStatus(ghost) {
 function displayMenu() {
   console.log('\n\nSelect Option:\n');  // each \n creates a new line
   console.log('(d) Eat Dot');
-  console.log('(1) Eat Inky');
-  console.log('(2) Eat Blinky');
-  console.log('(3) Eat Pinky');
-  console.log('(4) Eat Clyde');
-  console.log('(p) Eat Powerpellet')
+  console.log('(1) Eat Inky ' + displayStatus(inky));
+  console.log('(2) Eat Blinky ' + displayStatus(blinky));
+  console.log('(3) Eat Pinky ' + displayStatus(pinky));
+  console.log('(4) Eat Clyde ' + displayStatus(clyde));
+  console.log('(p) Eat Powerpellet');
   console.log('(q) Quit');
 }
 
