@@ -57,7 +57,7 @@ function clearScreen() {
 }
 
 function displayStats() {
-  console.log('Score: ' + score + '     Lives: ' + lives);
+  console.log('Score: ' + score + '     Lives: ' + lives + '     Powerpellets: ' + powerPellets);
 }
 
 function displayStatus(ghost) {
@@ -95,10 +95,10 @@ function eatGhost(ghost) {
   if (ghost.edible === false) {
     lives -= 1;
     console.log('Nom!');
-    console.log('\nPac-Man has been killed by the ' + ghost.color 'coloured ghost named ' + ghost.name '!');
+    console.log('\nPac-Man has been killed by the ' + ghost.color + 'coloured ghost named ' + ghost.name + '!');
   } else if (ghost.edible === true) {
     console.log('Nom!');
-    console.log('\nPac-Man has eaten the ' + ghost.color 'ghost named ' + ghost.name '!');
+    console.log('\nPac-Man has eaten the ' + ghost.color + 'ghost named ' + ghost.name + '!');
     score += 200;
     ghost.edible = false;
   }
