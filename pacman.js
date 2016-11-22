@@ -113,7 +113,23 @@ function processInput(key) {
     case 'd':
       eatDot();
       break;
-      default:
+    case '1':
+      eatGhost(inky);
+      gameOver();
+      break;
+    case '2':
+      eatGhost(blinky);
+      gameOver();
+      break;
+    case '3':
+      eatGhost(pinky);
+      gameOver();
+      break;
+    case '4':
+      eatGhost(clyde);
+      gameOver();
+      break;
+    default:
       console.log('\nInvalid Command!');
   }
 }
