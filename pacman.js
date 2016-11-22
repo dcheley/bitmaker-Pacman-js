@@ -8,7 +8,7 @@ var powerPellets = 4;
 var inky = {
   menu_option: '1',
   name: 'Inky',
-  colour: 'Red',
+  color: 'Red',
   character: 'Shadow',
   edible: false
 };
@@ -16,7 +16,7 @@ var inky = {
 var blinky = {
   menu_option: '2',
   name: 'Iknky',
-  colour: 'Cyan',
+  color: 'Cyan',
   character: 'Speedy',
   edible: false
 };
@@ -24,7 +24,7 @@ var blinky = {
 var pinky = {
   menu_option: '3',
   name: 'Piknky',
-  colour: 'Pink',
+  color: 'Pink',
   character: 'Bashful',
   edible: false
 };
@@ -32,7 +32,7 @@ var pinky = {
 var clyde = {
   menu_option: '4',
   name: 'Clyde',
-  colour: 'Orange',
+  color: 'Orange',
   character: 'Pokey',
   edible: false
 };
@@ -81,16 +81,28 @@ function displayMenu() {
 
 function displayPrompt() {
   // process.stdout.write is similar to console.log except it doesn't add a new line after the text
-  process.stdout.write('\nWaka Waka :v '); // :v is the Pac-Man emoji.
+  process.stdout.write('\n(Q**)==Q :v '); // :v is the Pac-Man emoji.
 }
 
 
 // Menu Options
 function eatDot() {
-  console.log('\nChomp!');
+  console.log('\nNom!');
   score += 10;
 }
 
+function eatGhost(ghost) {
+  if (ghost.edible === false) {
+    lives -= 1;
+    console.log('Nom!');
+    console.log('\nPac-Man has been killed by the ' + ghost.color 'coloured ghost named ' + ghost.name '!');
+  } else if (ghost.edible === true) {
+    console.log('Nom!');
+    console.log('\nPac-Man has eaten the ' + ghost.color 'ghost named ' + ghost.name '!');
+    score += 200;
+    ghost.edible = false;
+  }
+}
 // Process Player's Input
 function processInput(key) {
   switch(key) {
@@ -101,10 +113,7 @@ function processInput(key) {
     case 'd':
       eatDot();
       break;
-    case '1':
-      eatGhost();
-      break;
-    default:
+      default:
       console.log('\nInvalid Command!');
   }
 }
