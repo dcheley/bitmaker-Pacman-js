@@ -111,12 +111,17 @@ function gameOver() {
   }
 }
 
+function makeEdible() {
+  for (i = 0; i < ghosts.length; i++) {
+    ghosts[i].edible = true;
+  }
+}
+
 function eatPellet() {
   powerPellets -= 1;
   score += 50;
-  for (var i = 0; i < ghosts.length; i++) {
-    ghosts[i].edible = true;
-  }
+  makeEdible();
+  console.log('\nPOWERED UP!!');
 }
 
 function noPellets() {
