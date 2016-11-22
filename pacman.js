@@ -109,6 +109,14 @@ function gameOver() {
     process.exit()
   }
 }
+
+function eatPellet() {
+  powerPellets -= 1;
+  score += 50;
+  for (var i = 0; i < ghosts.length; i++) {
+    ghosts[i].edible = true;
+  }
+}
 // Process Player's Input
 function processInput(key) {
   switch(key) {
