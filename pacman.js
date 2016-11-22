@@ -117,6 +117,12 @@ function eatPellet() {
     ghosts[i].edible = true;
   }
 }
+
+function noPellets() {
+  if (powerPellets === 0) {
+    console.log('\n0 Pellets Left!')
+  }
+}
 // Process Player's Input
 function processInput(key) {
   switch(key) {
