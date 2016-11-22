@@ -2,7 +2,7 @@
 var score = 0;
 var lives = 2;
 var powerPellets = 4;
-
+var dots = 240;
 
 // Define your ghosts here
 var inky = {
@@ -57,7 +57,7 @@ function clearScreen() {
 }
 
 function displayStats() {
-  console.log('Score: ' + score + '     Lives: ' + lives + '     Powerpellets: ' + powerPellets);
+  console.log('Score: ' + score + '     Lives: ' + lives + '     Powerpellets: ' + powerPellets + '     Remaining Dots: ' + dots);
 }
 
 function displayStatus(ghost) {
@@ -90,6 +90,7 @@ function displayPrompt() {
 function eatDot() {
   console.log('\nNom!');
   score += 10;
+  dots -= 1;
 }
 
 function eatGhost(ghost) {
