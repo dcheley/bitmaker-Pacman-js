@@ -76,6 +76,7 @@ function displayMenu() {
   console.log('(2) Eat Blinky');
   console.log('(3) Eat Pinky');
   console.log('(4) Eat Clyde');
+  console.log('(p) Eat Powerpellet')
   console.log('(q) Quit');
 }
 
@@ -147,6 +148,10 @@ function processInput(key) {
       break;
     case '4':
       eatGhost(clyde);
+      gameOver();
+      break;
+    case 'p':
+      eatPellet();
       gameOver();
       break;
     default:
