@@ -1,6 +1,7 @@
 // Setup initial game stats
 var score = 0;
 var lives = 2;
+var powerPellets = 4;
 
 
 // Define your ghosts here
@@ -20,7 +21,7 @@ var blinky = {
   edible: false
 };
 
-var Pinky = {
+var pinky = {
   menu_option: '3',
   name: 'Piknky',
   colour: 'Pink',
@@ -37,6 +38,7 @@ var clyde = {
 };
 
 var ghosts = ['Inky', 'Blinky', 'Pinky', 'Clyde'];
+
 // replace this comment with your four ghosts setup as objects
 
 
@@ -56,6 +58,15 @@ function clearScreen() {
 
 function displayStats() {
   console.log('Score: ' + score + '     Lives: ' + lives);
+}
+
+function displayStatus(ghost) {
+  if (ghost.edible === true) {
+    return ('edible');
+  }
+    else {
+    return ('invulnerable');
+  }
 }
 
 function displayMenu() {
@@ -78,11 +89,6 @@ function displayPrompt() {
 function eatDot() {
   console.log('\nChomp!');
   score += 10;
-}
-
-function eatGhost() {
-  console.log('\nNom Nom!');
-  score += 200;
 }
 
 // Process Player's Input
