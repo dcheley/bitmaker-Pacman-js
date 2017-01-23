@@ -37,10 +37,7 @@ var clyde = {
   edible: false
 };
 
-var ghosts = ['Inky', 'Blinky', 'Pinky', 'Clyde'];
-
-// replace this comment with your four ghosts setup as objects
-
+var ghosts = [inky, blinky, pinky, clyde];
 
 // Draw the screen functionality
 function drawScreen() {
@@ -62,10 +59,10 @@ function displayStats() {
 
 function displayStatus(ghost) {
   if (ghost.edible === true) {
-    return ('edible');
+    return ('Edible');
   }
     else {
-    return ('invulnerable');
+    return ('Invulnerable');
   }
 }
 
@@ -98,7 +95,7 @@ function eatGhost(ghost) {
     lives -= 1;
     console.log('\nNom!');
     console.log('\nPac-Man has been killed by the ' + ghost.color + ' coloured ghost named ' + ghost.name + '!');
-  } else if (ghost.edible === true) {
+  } else {
     console.log('\nNom!');
     console.log('\nPac-Man has eaten the ' + ghost.color + ' ghost named ' + ghost.name + '!');
     score += 200;
@@ -112,7 +109,7 @@ function gameOver() {
   }
 }
 
-function makeEdible() {
+function makeEdible(ghosts) {
   for (i = 0; i < ghosts.length; i++) {
     ghosts[i].edible = true;
   }
@@ -121,7 +118,7 @@ function makeEdible() {
 function eatPellet() {
   powerPellets -= 1;
   score += 50;
-  makeEdible();
+  makeEdible(ghosts);
   console.log('\nPOWERED UP!!');
 }
 // function eatPellet() {
