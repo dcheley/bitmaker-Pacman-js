@@ -100,7 +100,7 @@ function eatGhost(ghost) {
     console.log('\nPac-Man has been killed by the ' + ghost.color + ' coloured ghost named ' + ghost.name + '!');
   } else if (ghost.edible === true) {
     console.log('\nNom!');
-    console.log('\nPac-Man has eaten the ' + ghost.color + 'ghost named ' + ghost.name + '!');
+    console.log('\nPac-Man has eaten the ' + ghost.color + ' ghost named ' + ghost.name + '!');
     score += 200;
     ghost.edible = false;
   }
