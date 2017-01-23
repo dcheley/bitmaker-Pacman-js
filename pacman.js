@@ -109,7 +109,7 @@ function gameOver() {
   }
 }
 
-function makeEdible(ghosts) {
+function makeEdible() {
   for (i = 0; i < ghosts.length; i++) {
     ghosts[i].edible = true;
   }
