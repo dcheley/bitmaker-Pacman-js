@@ -17,7 +17,7 @@ Currently `pacman.js` has the following functionality:
 
 # Play the game!
 
-Try playing the game:
+Try playing the game by typing the following into your CLI:
 
 ```shell
 $ node pacman.js
