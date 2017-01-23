@@ -118,7 +118,7 @@ function makeEdible() {
 function eatPellet() {
   powerPellets -= 1;
   score += 50;
-  makeEdible(ghosts);
+  makeEdible();
   console.log('\nPOWERED UP!!');
 }
 // function eatPellet() {
