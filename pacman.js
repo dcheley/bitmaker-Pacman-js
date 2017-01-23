@@ -82,7 +82,6 @@ function displayPrompt() {
   process.stdout.write('\n(Q**)==Q :v \n'); // :v is the Pac-Man emoji.
 }
 
-
 // Menu Options
 function eatDot() {
   console.log('\nNom!');
@@ -121,14 +120,6 @@ function eatPellet() {
   makeEdible();
   console.log('\nPOWERED UP!!');
 }
-// function eatPellet() {
-// ghosts.forEach(function(ghost) {
-//   ghost.edible = true
-//   });
-//   score += 50;
-//   powerPellets -= 1;
-//   console.log('\nPOWERED UP!!');
-// }
 
 function noPellets() {
   if (powerPellets === 0) {
@@ -178,11 +169,6 @@ function processInput(key) {
       console.log('\nInvalid Command!');
   }
 }
-
-
-//
-// YOU PROBABLY DON'T WANT TO CHANGE CODE BELOW THIS LINE
-//
 
 // Setup Input and Output to work nicely in our Terminal
 var stdin = process.stdin;
